@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Iconify -->
+    <script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
+
+    <script>
+      //   window.onload = function () {
+      //     var chart = new CanvasJS.Chart("chartContainer", {
+      //       animationEnabled: true,
+      //       // title: {
+      //       //   text: "Google - Consolidated Quarterly Revenue",
+      //       //   fontFamily: "arial black",
+      //       //   fontColor: "#695A42",
+      //       // },
+      //       dataPointWidth: 25,
+      //       width: 280,
+      //       axisX: {
+      //         interval: 1,
+      //         gridThickness: 0,
+      //         lineThickness: 0,
+      //         tickLength: 0,
+      //         labelFormatter: function () {
+      //           return " ";
+      //         },
+      //       },
+      //       axisY: {
+      //         gridThickness: 0,
+      //         lineThickness: 0,
+      //         tickLength: 0,
+      //         labelFormatter: function () {
+      //           return " ";
+      //         },
+      //       },
+      //       toolTip: {
+      //         shared: true,
+      //         content: toolTipContent,
+      //       },
+      //       data: [
+      //         {
+      //           type: "stackedColumn",
+      //           showInLegend: true,
+      //           color: "#00E096",
+      //           name: "Services",
+      //           markerType: "square", // Use square marker
+      //           markerBorderColor: "blue", // Border color
+      //           markerBorderThickness: 2, // Border thickness
+      //           markerSize: 10, // Marker size
+      //           dataPoints: [
+      //             { y: 6.75, x: new Date(2010, 0) },
+      //             { y: 8.57, x: new Date(2011, 0) },
+      //             { y: 10.64, x: new Date(2012, 0) },
+      //             { y: 13.97, x: new Date(2013, 0) },
+      //             { y: 15.42, x: new Date(2014, 0) },
+      //             { y: 17.26, x: new Date(2015, 0) },
+      //           ],
+      //         },
+      //         {
+      //           type: "stackedColumn",
+      //           showInLegend: true,
+      //           name: "Volume",
+      //           color: "#0095FF",
+
+      //           dataPoints: [
+      //             { y: 6.82, x: new Date(2010, 0) },
+      //             { y: 9.02, x: new Date(2011, 0) },
+      //             { y: 11.8, x: new Date(2012, 0) },
+      //             { y: 14.11, x: new Date(2013, 0) },
+      //             { y: 15.96, x: new Date(2014, 0) },
+      //             { y: 17.73, x: new Date(2015, 0) },
+      //           ],
+      //         },
+      //       ],
+      //     });
+
+      //     chart.render();
+
+      //     function toolTipContent(e) {
+      //       var str = "";
+      //       var total = 0;
+      //       var str2, str3;
+      //       for (var i = 0; i < e.entries.length; i++) {
+      //         var str1 =
+      //           '<span style= "color:' +
+      //           e.entries[i].dataSeries.color +
+      //           '"> ' +
+      //           e.entries[i].dataSeries.name +
+      //           "</span>: $<strong>" +
+      //           e.entries[i].dataPoint.y +
+      //           "</strong>bn<br/>";
+      //         total = e.entries[i].dataPoint.y + total;
+      //         str = str.concat(str1);
+      //       }
+      //       str2 =
+      //         '<span style = "color:DodgerBlue;"><strong>' +
+      //         e.entries[0].dataPoint.x.getFullYear() +
+      //         "</strong></span><br/>";
+      //       total = Math.round(total * 100) / 100;
+      //       str3 =
+      //         '<span style = "color:Tomato">Total:</span><strong> $' +
+      //         total +
+      //         "</strong>bn<br/>";
+      //       return str2.concat(str).concat(str3);
+      //     }
+      //   };
+    </script>
+  </head>
+
+  <body>
+    <nav>
+      <div class="sidebar-top">
+        <img src="./img/dabang_logo.png" class="logo" alt="" />
+        <h3 class="logo-text hide">Dabang</h3>
+      </div>
+
+      <div class="sidebar-links">
+        <ul>
+          <li>
+            <a href="#" class="nav_link active">
+              <div class="icon">
+                <iconify-icon icon="fluent:data-pie-24-filled"></iconify-icon>
+              </div>
+              <span class="link hide">Dashboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="nav_link">
+              <div class="icon">
+                <iconify-icon icon="mynaui:chart-line"></iconify-icon>
+              </div>
+              <span class="link hide">Leaderboard</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="nav_link">
+              <div class="icon">
+                <iconify-icon
+                  icon="heroicons-outline:shopping-cart"
+                ></iconify-icon>
+              </div>
+              <span class="link hide">Order</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="nav_link">
+              <div class="icon">
+                <iconify-icon icon="ion:bag-handle-outline"></iconify-icon>
+              </div>
+              <span class="link hide">Products</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="nav_link">
+              <div class="icon">
+                <iconify-icon icon="carbon:chart-line"></iconify-icon>
+              </div>
+              <span class="link hide">Sales Report</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="nav_link">
+              <div class="icon">
+                <iconify-icon icon="ri:message-2-line"></iconify-icon>
+              </div>
+              <span class="link hide">Messages</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="nav_link">
+              <div class="icon">
+                <iconify-icon icon="ic:outline-settings"></iconify-icon>
+              </div>
+              <span class="link hide">Settings</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="nav_link">
+              <div class="icon">
+                <iconify-icon icon="heroicons-outline:logout"></iconify-icon>
+              </div>
+              <span class="link hide">Sign Out</span>
+            </a>
+          </li>
+
+          <li>
+            <div class="pro-shrink hidden">
+              <img src="./img/Pro-Logo.png" class="pro-logo" alt="" />
+              <div>Dabang Pro</div>
+            </div>
+
+            <div class="pro-full">
+              <div class="ellipse ellipse-bottom"></div>
+              <div class="ellipse ellipse-top"></div>
+              <img src="./img/Pro-Logo.png" class="pro-logo" alt="" />
+              <div class="pro-title">Dabang Pro</div>
+              <div class="pro-content">
+                Get access to all features on tetumbas
+              </div>
+              <div class="btn-get_pro">Get Pro</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <header class="header" id="header">
+      <span class="shrink-btn">
+        <iconify-icon
+          class="menu-icon"
+          icon="mingcute:menu-fill"
+        ></iconify-icon>
+      </span>
+
+      <div class="search">
+        <div class="icon">
+          <iconify-icon
+            class="search-icon"
+            icon="octicon:search-16"
+          ></iconify-icon>
+        </div>
+        <input type="text" placeholder="Search Here..." />
+      </div>
+
+      <div class="icon notification">
+        <iconify-icon
+          class="notification-icon"
+          icon="clarity:notification-line"
+        ></iconify-icon>
+      </div>
+
+      <div class="user_account">
+        <img class="user_img" src="./img/user.jpg" alt="user" />
+
+        <div class="user_profile">
+          <div class="user_name">Saurabh</div>
+          <div class="user_role">Admin</div>
+        </div>
+
+        <div class="dropdown">
+          <input type="checkbox" id="dropdown" />
+          <label class="dropdown__face" for="dropdown">
+            <div class="icon">
+              <iconify-icon icon="fe:arrow-down"></iconify-icon>
+            </div>
+          </label>
+          <div class="dropdown-content">
+            <ul class="dropdown">
+              <li><a class="dropdown-link" href="#">Profile</a></li>
+              <li><a class="dropdown-link" href="#">My Account</a></li>
+              <li><a class="dropdown-link" href="#">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="sales">
+        <div class="sales-header">
+          <div class="sales-typography">
+            <div class="primary-heading">Today's Sales</div>
+            <div class="tertiary-heading">Sales Summary</div>
+          </div>
+
+          <div class="btn btn-exort">Export</div>
+        </div>
+
+        <div class="cards">
+          <div class="card card-1">
+            <div class="icons icon-1">
+              <i class="bx bx-bar-chart-square"></i>
+            </div>
+            <div class="number">$1k</div>
+            <div class="total_sales secondary-heading">Total Sales</div>
+            <div class="growth">+8% from yesterday</div>
+          </div>
+
+          <div class="card card-2">
+            <div class="icons icon-2">
+              <i class="bx bxs-report"></i>
+            </div>
+            <div class="number">300</div>
+            <div class="total_sales secondary-heading">Total Order</div>
+            <div class="growth">+5% from yesterday</div>
+          </div>
+
+          <div class="card card-3">
+            <div class="icons icon-3">
+              <i class="bx bxs-purchase-tag-alt"></i>
+            </div>
+            <div class="number">5</div>
+            <div class="total_sales secondary-heading">Product Sold</div>
+            <div class="growth">+1.2% from yesterday</div>
+          </div>
+
+          <div class="card card-4">
+            <div class="icons icon-4">
+              <i class="bx bxs-user-plus"></i>
+            </div>
+            <div class="number">8</div>
+            <div class="total_sales secondary-heading">New Customers</div>
+            <div class="growth">+0.5% from yesterday</div>
+          </div>
+        </div>
+      </div>
+      <div class="insight">
+        <div class="primary-heading">Visitor Insights</div>
+        <input
+          type="radio"
+          id="radioYour Account"
+          name="accordion"
+          checked="checked"
+        />
+        <label class="item" for="radioYour Account">
+          <div class="title">Lorem ipsum</div>
+          <div class="content">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis
+            aliquid harum velit sed similique exercitationem, quasi in, nulla
+            quos accusamus nemo vel dolores. Est id sint dolore, deserunt
+            dolorum accusantium.
+          </div>
+        </label>
+        <input type="radio" id="radioPayment &amp; Pricing" name="accordion" />
+        <label class="item" for="radioPayment &amp; Pricing">
+          <div class="title">Lorem ipsum</div>
+          <div class="content">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis
+            aliquid harum velit sed similique exercitationem, quasi in, nulla
+            quos accusamus nemo vel dolores. Est id sint dolore, deserunt
+            dolorum accusantium.
+          </div>
+        </label>
+      </div>
+      <div class="visitor">
+        <div class="primary-heading heading-pd">Visitor's List</div>
+        <table class="table visitor-table">
+          <thead class="table-row">
+            <tr>
+              <th class="table-heading">#</th>
+              <th class="table-heading">Name</th>
+              <th class="table-heading">Join Date</th>
+              <th class="table-heading">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-row">
+              <td>1</td>
+              <td>Stephen P. Osborn</td>
+              <td>17 Jan, 2023</td>
+              <td>
+                <span class="edit"><i class="bx bx-edit-alt"></i></span>
+                <span class="delete"><i class="bx bxs-trash"></i></span>
+              </td>
+            </tr>
+            <tr class="table-row">
+              <td>2</td>
+              <td>Odessa G. Mettler</td>
+              <td>17 Jan, 2023</td>
+              <td>
+                <span class="edit"><i class="bx bx-edit-alt"></i></span>
+                <span class="delete"><i class="bx bxs-trash"></i></span>
+              </td>
+            </tr>
+            <tr class="table-row">
+              <td>3</td>
+              <td>Juditd H. Richards</td>
+              <td>13 Feb, 2023</td>
+              <td>
+                <span class="edit"><i class="bx bx-edit-alt"></i></span>
+                <span class="delete"><i class="bx bxs-trash"></i></span>
+              </td>
+            </tr>
+            <tr class="table-row">
+              <td>4</td>
+              <td>Jack B. Perez</td>
+              <td>10 Feb, 2023</td>
+              <td>
+                <span class="edit"><i class="bx bx-edit-alt"></i></span>
+                <span class="delete"><i class="bx bxs-trash"></i></span>
+              </td>
+            </tr>
+            <tr class="table-row">
+              <td>5</td>
+              <td>Chris B. Ryant</td>
+              <td>10 Feb, 2023</td>
+              <td>
+                <span class="edit"><i class="bx bx-edit-alt"></i></span>
+                <span class="delete"><i class="bx bxs-trash"></i></span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="read-more">Read More</div>
+      </div>
+      <div class="top-product">
+        <div class="primary-heading heading-pd">Top Products</div>
+
+        <table class="table top-product-table">
+          <thead class="table-row">
+            <tr>
+              <th class="table-heading">#</th>
+              <th class="table-heading text-left">Name</th>
+              <th class="table-heading">Popularity</th>
+              <th class="table-heading">Sales</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-row">
+              <td>1</td>
+              <td>Home Decor Range</td>
+              <td>
+                <progress id="p1" value="45" max="100"></progress>
+              </td>
+              <td>
+                <div class="sales-percent sp-1">45%</div>
+              </td>
+            </tr>
+            <tr class="table-row">
+              <td>2</td>
+              <td>Disney Princess Pink Bag 18'</td>
+              <td>
+                <progress id="p2" value="29" max="100"></progress>
+              </td>
+              <td>
+                <div class="sales-percent sp-2">29%</div>
+              </td>
+            </tr>
+            <tr class="table-row">
+              <td>3</td>
+              <td>Bathroom Essentials</td>
+              <td>
+                <progress id="p3" value="18" max="100"></progress>
+              </td>
+              <td>
+                <div class="sales-percent sp-3">18%</div>
+              </td>
+            </tr>
+            <tr class="table-row">
+              <td>4</td>
+              <td>Apple Smartwatches</td>
+              <td>
+                <progress id="p4" value="25" max="100"></progress>
+              </td>
+              <td>
+                <div class="sales-percent sp-4">25%</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="main-product">
+        <div class="primary-heading">Main Products</div>
+
+        <div class="tabs">
+          <div class="tab">
+            <input type="radio" id="tab1" name="tab-group" checked />
+            <label for="tab1" class="product-label">Product 1</label>
+            <div class="tab-content">
+              <div class="product-image">
+                <img src="./img/product-image.png" />
+              </div>
+
+              <div class="product-description">
+                <div class="product-title">What is this Product??</div>
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly believable. If you are going to use a passage of
+                  Lorem Ipsum, you need to be sure there isn't anything
+                  embarrassing hidden in the middle of text.
+                </p>
+
+                <div class="btn__read-more">Read More</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab">
+            <input type="radio" id="tab2" name="tab-group" />
+            <label for="tab2" class="product-label"> Product 2</label>
+            <div class="tab-content">
+              <div class="product-image">
+                <img src="./img/product-image.png" />
+              </div>
+
+              <div class="product-description">
+                <div class="product-title">What is this Product??</div>
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly believable. If you are going to use a passage of
+                  Lorem Ipsum, you need to be sure there isn't anything
+                  embarrassing hidden in the middle of text.
+                </p>
+
+                <div class="btn__read-more">Read More</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sales-mapping">
+        <!-- <div class="primary-heading">Sales Mapping by Country</div> -->
+
+        <img
+          class="image-world_map"
+          width="800"
+          height="600"
+          src="./img/Sales Mapping-full.png"
+          alt="world-sales"
+        />
+      </div>
+      <div class="vs-level">
+        <img
+          class="image-world_map"
+          width="800"
+          height="600"
+          src="./img/Volume.png"
+          alt="volume"
+        />
+        <!-- <canvas
+          id="chartContainer"
+          style="
+            position: relative;
+            min-height: 90%;
+            min-width: 90%;
+            padding: 20px;
+          "
+        ></canvas> -->
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      // Data for the chart
+      var data = {
+        labels: [2010, 2011, 2012, 2013, 2014, 2015],
+        datasets: [
+          {
+            label: "Services",
+            backgroundColor: "#00E096",
+            barPercentage: 0.4,
+            pointStyle: "circle",
+            borderRadius: 5,
+            data: [6.75, 8.57, 10.64, 13.97, 15.42, 17.26],
+          },
+          {
+            label: "Volume",
+            backgroundColor: "#0095FF",
+            barPercentage: 0.4,
+            pointStyle: "circle",
+            borderRadius: 5,
+            data: [6.82, 9.02, 11.8, 14.11, 15.96, 17.73],
+          },
+        ],
+      };
+
+      // Configuration options
+      var options = {
+        scales: {
+          x: {
+            stacked: true,
+            display: false,
+          },
+          y: {
+            stacked: true,
+            display: false,
+          },
+        },
+
+        plugins: {
+          tooltip: {
+            mode: "index",
+            intersect: false,
+            callbacks: {
+              label: function (tooltipItem, data) {
+                var datasetLabel =
+                  data.datasets[tooltipItem.datasetIndex].label || "";
+                return (
+                  datasetLabel + ": $" + tooltipItem.yLabel.toFixed(2) + "bn"
+                );
+              },
+            },
+          },
+          legend: {
+            labels: {
+              font: {
+                family: "Poppins",
+                size: 16,
+                lineHeight: 3,
+              },
+              usePointStyle: true,
+            },
+            position: "bottom",
+          },
+        },
+      };
+
+      // Get the context of the canvas element
+      var ctx = document.getElementById("chartContainer").getContext("2d");
+
+      // Create the chart
+      var stackedBarChart = new Chart(ctx, {
+        type: "bar",
+        data: data,
+        options: options,
+      });
+    </script>
+  </body>
+</html>
